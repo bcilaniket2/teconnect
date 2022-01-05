@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  outline: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Opera and Firefox */
+  -webkit-tap-highlight-color: transparent;
+
+  ::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  // /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 8px;
+    margin: 16px 0 16px 0;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 5px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    background-color: #aaaaaa;
+  }
+}
+
+.body_styling {
+  // font-family: poppins;
+  padding-top: 70px;
+
+  @media only screen and (min-width: 1500px) {
+    padding-top: 84px;
+  }
+  @media only screen and (max-width: 1180px) {
+    padding-top: 82px;
+  }
+  @media only screen and (max-width: 580px) {
+    padding-top: 61px;
+  }
+}

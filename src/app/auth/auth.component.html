@@ -1,0 +1,75 @@
+<div
+  class="auth_wrapper"
+  data-aos-once="true"
+  data-aos="fade-up"
+  data-aos-delay="100"
+>
+  <div class="heading">Login</div>
+ </div>
+<div
+  class="auth_form_container"
+  data-aos-once="true"
+  data-aos="fade-up"
+  data-aos-delay="200"
+>
+  <form class="auth_form" [formGroup]="authForm">
+    <!-- <div class="api_error" *ngIf="error">{{ error }}</div> -->
+    <div class="elements">
+      <div class="element_name">
+        <input
+          type="text"
+          class="field"
+          formControlName="userId"
+          placeholder="User Id"
+        />
+        <div
+          *ngIf="
+            registerFormControl['userId'].invalid &&
+            (registerFormControl['userId'].dirty ||
+              registerFormControl['userId'].touched)
+          "
+          class="alert"
+        >
+          <div *ngIf="registerFormControl['userId'].errors?.['required']">
+            User Id required
+          </div>
+          <!-- <div *ngIf="registerFormControl['email'].errors?.['pattern']">
+            Enter valid email address
+          </div> -->
+        </div>
+      </div>
+      <div class="element_name" *ngIf="!forgetPassword">
+        <input
+          type="text"
+          class="field"
+          formControlName="password"
+          placeholder="Password"
+        />
+        <div
+          *ngIf="
+            registerFormControl['password'].invalid &&
+            (registerFormControl['password'].dirty ||
+              registerFormControl['password'].touched)
+          "
+          class="alert"
+        >
+          <div *ngIf="registerFormControl['password'].errors?.['required']">
+            Enter password
+          </div>
+          <!-- <div *ngIf="registerFormControl['password'].errors?.['minlength']">
+            Enter password more than 7 characters
+          </div> -->
+          <div *ngIf="registerFormControl['password'].errors?.['maxlength']">
+            Enter password less than 50 characters
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="submit_button"
+      *ngIf="loginMode == true && forgetPassword == false"
+    >
+      <button class="submit" type="submit" (click)="onSubmit()">Login</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,21 @@
+<header
+  class="header"
+  ngxHideOnScroll
+  [propertyUsedToHide]="'top'"
+  [valueWhenHidden]="'-100px'"
+  [valueWhenShown]="'0px'"
+>
+  <div class="header_container">
+    <a
+      class="navbuttons_link"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLink="/"
+    >
+      <div class="header_icon">
+        <img class="header_icon__block" src="../../../assets/png/gold_bg.png" />
+      </div>
+      <p>Te Connect</p>
+    </a>
+  </div>
+</header>
