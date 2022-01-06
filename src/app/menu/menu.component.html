@@ -1,2 +1,57 @@
-<p>menu works!</p>
-<app-report1></app-report1>
+<p *ngFor="let key of Object.keys(siteData.menu)">{{key}}</p>
+<p *ngFor="let key of Object.keys(siteData.menu.Menu[0])">{{key}}</p>
+
+<div *ngFor="let reports of siteData.menu.Menu[0].Reports " >
+<div *ngFor="let key of Object.keys(reports)"><a 
+    *ngFor="let value of Object.values(reports)"  
+    routerLink="/menu/{{value}}">{{key}}</a></div>
+</div>
+
+<router-outlet></router-outlet>
+
+
+
+<div class="phone_hamburger">
+    <div class="menu_hamburger">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <!-- <div class="menu_green">{{siteData.menu}}</div> -->
+            <div class="menu_dash">
+              <a
+                class="menu_dashboard"
+               >
+                <!-- <div>{{ sum }}</div> -->
+                <li>
+                  ₹{{ siteData.menu }}
+                  <br />
+                  {{ siteData.menu }}
+                </li></a
+              >
+            </div>
+
+            <!-- <a
+              class="navbuttons_link"
+              routerLink="{{ menuField.hamburgerNav[1] }}"
+              *ngFor="
+                let menuField of siteData.header.menuHamburger.hamburgerNavs;
+                index as a
+              "
+              ><li>{{ menuField.hamburgerNav[0] }}</li></a
+            > -->
+            <!-- <app-footer></app-footer> -->
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- <div class="header_menu_container">
+      <div class="header_icon">
+        <img class="header_icon__block" [src]="siteData.header.logo" />
+      </div>
+      <p>{{ siteData.header.name }}</p>
+    </div> -->
+  </div>

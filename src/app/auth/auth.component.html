@@ -56,10 +56,7 @@
           <div *ngIf="registerFormControl['password'].errors?.['required']">
             Enter password
           </div>
-          <!-- <div *ngIf="registerFormControl['password'].errors?.['minlength']">
-            Enter password more than 7 characters
-          </div> -->
-          <div *ngIf="registerFormControl['password'].errors?.['maxlength']">
+         <div *ngIf="registerFormControl['password'].errors?.['maxlength']">
             Enter password less than 50 characters
           </div>
         </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import sitedata from '../../assets/json/sitedata.json';
 
 @Component({
   selector: 'app-menu',
@@ -6,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-
-  constructor() { }
-
+  siteData: { menu: any } = sitedata;
+  Object = Object;
+   constructor(private router:Router) { }
+ 
   ngOnInit(): void {
   }
 

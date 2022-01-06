@@ -13,9 +13,9 @@
       routerLink="/"
     >
       <div class="header_icon">
-        <img class="header_icon__block" src="../../../assets/png/gold_bg.png" />
+        <img class="header_icon__block" [src]="siteData.header.logo" />
       </div>
-      <p>Te Connect</p>
+      <p>{{siteData.header.name}}</p>
     </a>
   </div>
 </header>
