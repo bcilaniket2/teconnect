@@ -2,41 +2,22 @@
 .auth_wrapper {
   text-align: center;
   padding: 80px 16% 51px 16%;
+  color: #051441;
+  font-size: 33px;
+  font-weight: 600;
   @media only screen and (min-width: 1500px) {
     padding-top: 90px;
   }
-
   @media only screen and (max-width: 1180px) {
     padding-top: 56px;
+    font-size: 31px;
+  }
+  @media only screen and (max-width: 880px) {
+    font-size: 28px;
   }
   @media only screen and (max-width: 580px) {
     padding-bottom: 39px;
-  }
-  .heading {
-    color: #051441;
-    font-size: 33px;
-    font-weight: 600;
-    @media only screen and (max-width: 1180px) {
-      font-size: 31px;
-    }
-    @media only screen and (max-width: 880px) {
-      font-size: 28px;
-    }
-    @media only screen and (max-width: 580px) {
-      font-size: 22px;
-    }
-  }
-  .sub_heading {
-    color: gray;
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 8px;
-    @media only screen and (max-width: 1180px) {
-      font-size: 15px;
-    }
-    @media only screen and (max-width: 580px) {
-      font-size: 14px;
-    }
+    font-size: 22px;
   }
 }
 .auth_form_container {
@@ -49,30 +30,11 @@
     margin-bottom: 60px;
   }
   .auth_form {
-    .api_error {
-      padding: 0 4%;
-      text-align: center;
-      margin-bottom: 12px;
-      font-size: 15.6px;
-      color: rebeccapurple;
-      @media only screen and (max-width: 1180px) {
-        font-size: 14.7px;
-      }
-      @media only screen and (max-width: 880px) {
-        font-size: 14px;
-      }
-      @media only screen and (max-width: 580px) {
-        font-size: 13px;
-      }
-    }
     .elements {
       width: 100%;
       .element_name {
         width: 400px;
         margin: 0px auto 33px auto;
-        // @media only screen and (min-width: 1650px) {
-        //   margin: 5px 38%;
-        // }
         @media only screen and (max-width: 1180px) {
           width: 356px;
         }
@@ -119,53 +81,9 @@
             font-size: 13px;
           }
         }
-
-        .checkbox_container {
-          color: #051441;
-          margin-left: 30px;
-          font-size: 14px;
-          align-items: center;
-          display: flex;
-          @media only screen and (max-width: 580px) {
-            font-size: 13px;
-          }
-          @media only screen and (max-width: 490px) {
-            align-items: flex-start;
-          }
-
-          .ch {
-            padding-top: 4px;
-            @media only screen and (max-width: 490px) {
-              padding-top: 2px;
-            }
-
-            input {
-              // outline: none;
-              margin-right: 8px;
-              // margin-bottom: 16px;
-            }
-          }
-          span {
-            a {
-              text-decoration: none;
-              color: #4154f1;
-              position: relative;
-              cursor: pointer;
-            }
-          }
-        }
       }
     }
-    .create_login {
-      text-align: center;
-      margin-bottom: 14px;
-      color: #4154f1;
-      font-size: 13.6px;
-      cursor: pointer;
-      @media only screen and (max-width: 580px) {
-        font-size: 12.7px;
-      }
-    }
+
     .submit_button {
       text-align: center;
     }
@@ -192,16 +110,6 @@
     .submit:hover {
       background: #4154f1;
       color: white;
-    }
-    .forget_password {
-      text-align: center;
-      margin-top: 16px;
-      color: gray;
-      font-size: 13.6px;
-      cursor: pointer;
-      @media only screen and (max-width: 580px) {
-        font-size: 12.7px;
-      }
     }
   }
 }

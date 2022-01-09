@@ -11,8 +11,8 @@ export class MenuComponent implements OnInit {
   siteData: { menu: any } = sitedata;
   Object = Object;
    constructor(private router:Router) { }
- 
-  ngOnInit(): void {
+  
+ ngOnInit(): void {
   }
 
 }

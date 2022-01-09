@@ -4,8 +4,8 @@
   data-aos="fade-up"
   data-aos-delay="100"
 >
-  <div class="heading">Login</div>
- </div>
+  Login
+</div>
 <div
   class="auth_form_container"
   data-aos-once="true"
@@ -38,7 +38,7 @@
           </div> -->
         </div>
       </div>
-      <div class="element_name" *ngIf="!forgetPassword">
+      <div class="element_name">
         <input
           type="text"
           class="field"
@@ -56,16 +56,13 @@
           <div *ngIf="registerFormControl['password'].errors?.['required']">
             Enter password
           </div>
-         <div *ngIf="registerFormControl['password'].errors?.['maxlength']">
+          <div *ngIf="registerFormControl['password'].errors?.['maxlength']">
             Enter password less than 50 characters
           </div>
         </div>
       </div>
     </div>
-    <div
-      class="submit_button"
-      *ngIf="loginMode == true && forgetPassword == false"
-    >
+    <div class="submit_button">
       <button class="submit" type="submit" (click)="onSubmit()">Login</button>
     </div>
   </form>

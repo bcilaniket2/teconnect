@@ -5,9 +5,14 @@
    text-align: center;
    color: #a99fc5;
    letter-spacing: 1px;
+   border-top: 1px solid transparent;
+   border-image: linear-gradient( 
+0.25turn
+, rgba(56, 2, 155, 0), #d1cce0, rgba(56, 2, 155, 0));
+   border-image-slice: 1;
   
   .about {
-    margin: 24px 0 28px 0;
+    margin: 10px 0 28px 0;
     color:gray;
     font-weight: 500;
    p {

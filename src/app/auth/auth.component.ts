@@ -1,17 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators,FormBuilder} from '@angular/forms';
+import { Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.scss']
+  styleUrls: ['./auth.component.scss'],
 })
-export class AuthComponent implements OnInit {
-  submitted = false;
-  loginMode = true;
-  error: any;
 
+export class AuthComponent implements OnInit {
   authForm = this.formBuilder.group({
     userId: [
       '',
@@ -23,19 +20,21 @@ export class AuthComponent implements OnInit {
 
     password: [
       '',
-      [Validators.required, 
+      [
+        Validators.required,
         // Validators.minLength(8),
-         Validators.maxLength(50)],
+        Validators.maxLength(50),
+      ],
     ],
     // checkArray: this.formBuilder.array([], [Validators.required]),
   });
 
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router,
-    // private _authService: AuthService,
-    // private _errService: ErrorService
-  ) {
+    private router: Router
+  ) // private _authService: AuthService,
+  // private _errService: ErrorService
+  {
     console.log('auth');
   }
 
@@ -43,23 +42,18 @@ export class AuthComponent implements OnInit {
     return this.authForm.controls;
   }
 
-  isLoggedin: any = false;
-
   onSubmit() {
-    this.submitted = true;
     if (this.authForm.valid) {
       const userId = this.authForm.value.userId;
       const password = this.authForm.value.password;
-      if(userId=='admin' && password=='12345'){
-this.router.navigate(['menu']);
+      if (userId == 'admin' && password == '12345') {
+        this.router.navigate(['menu']);
       }
     } else {
       this.authForm.markAllAsTouched();
     }
   }
 
-  forgetPassword = false;
- 
   ngOnInit(): void {
     // this._authService.user.subscribe((res) => {
     //   if (res) {
@@ -67,5 +61,4 @@ this.router.navigate(['menu']);
     //   }
     // });
   }
-
 }

@@ -1,66 +1,31 @@
 <!-- <p *ngFor="let key of Object.keys(siteData.menu)">{{key}}</p> -->
-
-
-<!-- <p class="reports_list" *ngFor="let reports_list of Object.keys(siteData.menu.Menu[0])">{{reports_list}}</p>
-
-<div class="reports" *ngFor="let reports of siteData.menu.Menu[0].Reports " >
-<div class="reports_names" *ngFor="let reports_names of Object.keys(reports)"><a 
-    *ngFor="let reports_link of Object.values(reports)"  
-    routerLink="/menu/{{reports_link}}">{{reports_names}}</a></div>
-</div> -->
-
 <div class="navbuttons_container">
-   
-<div class="dropdown">
-  <div class="navbuttons">
-    <a
-      class="navbuttons_link"
-      *ngFor="let reports_list of Object.keys(siteData.menu.Menu[0])"
-      >{{ reports_list }}</a
-    >
-  </div>
-  <div class="dropdown-content">
-    <!-- <a
-      class="navbuttons_link"
-      routerLinkActive="myactive active"
-      routerLink="{{ companyField.companyNav[1] }}"
-      *ngFor="let companyField of siteData.header.navbuttons[1].Company"
-      >{{ companyField.companyNav[0] }}</a
-    > -->
-    <div class="reports" *ngFor="let reports of siteData.menu.Menu[0].Reports " >
-      <div class="reports_names" *ngFor="let reports_names of Object.keys(reports)"><a 
-          *ngFor="let reports_link of Object.values(reports)"  
-          routerLink="/menu/{{reports_link}}">{{reports_names}}</a></div>
-      </div>
-      
-  </div>
-</div>
-</div>
-<router-outlet></router-outlet>
-
-<!-- <div class="phone_hamburger">
-    <div class="menu_hamburger">
-      <nav role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <div class="menu_dash">
-              <a
-                class="menu_dashboard"
-               >
-                <li>
-                  ₹{{ siteData.menu }}
-                  <br />
-                  {{ siteData.menu }}
-                </li></a
-              >
-            </div>
-</ul>
+  <div class="dropdown">
+    <div class="navbuttons">
+      <a
+        class="navbuttons_link"
+        *ngFor="let reports_list of Object.keys(siteData.menu.Menu[0])"
+        >{{ reports_list }}</a
+      >
+    </div>
+    <div class="dropdown-content">
+      <div
+        class="reports"
+        *ngFor="let reports of siteData.menu.Menu[0].Reports"
+      >
+        <div *ngFor="let reports_names of Object.keys(reports)">
+          <a
+            class="navbuttons_link"
+            routerLinkActive="myactive active"
+            *ngFor="let reports_link of Object.values(reports)"
+            routerLink="/menu/{{ reports_link }}"
+            >{{ reports_names }}</a
+          >
         </div>
-      </nav>
+      </div>
     </div>
   </div>
-   -->
+</div>
+<div class="report_content">
+  <router-outlet></router-outlet>
+</div>
