@@ -1,21 +1,22 @@
 {
-    "header" : {
-      "logo": "/assets/png/gold_bg.png",
-      "name":"Te Connect"
-    },
+  "header": {
+    "logo": "/assets/png/gold_bg.png",
+    "name": "Te Connect"
+  },
 
-    "footer":{
-      "about":"Powered by : ",
-      "company":"Barcode India Ltd.",
-      "version":"Version 1.0",
-      "copyright":"© 2022 Te Connect | All rights reserved."
-    },
+  "footer": {
+    "about": "Powered by : ",
+    "company": "Barcode India Ltd.",
+    "version": "Version 1.0",
+    "copyright": "© 2022 Te Connect | All rights reserved."
+  },
 
-    "auth":{
+  "auth": {},
 
-    },
-
-    "menu":{
-      "Menu":[{"Reports":[{"Report1":"report1"},{"Report2":"report2"}]}, {"System Config":[]}]
-    }
-}  
+  "menu": {
+    "Menu": [
+      { "Reports": [{ "Report1": "report1" }, { "Report2": "report2" }, {"Charts":"charts"}] },
+      { "System Config": [] }
+    ]
+  }
+}
