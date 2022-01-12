@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './menu.component';
 import { Report2Component } from './report2/report2.component';
 import { ChartsComponent } from './charts/charts.component';
-
+// import { NgChartsModule } from 'ng2-charts';
 const menuRoutes: Routes = [
   {
     path: '',
@@ -20,7 +20,7 @@ const menuRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(menuRoutes),
-
+    // NgChartsModule
   ]
 })
 export class MenuModule { }

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Chart,registerables } from 'chart.js';
+import { Chart, registerables } from 'chart.js';
+
 export const CHART_COLORS = {
   red: 'rgb(255, 99, 132)',
   orange: 'rgb(255, 159, 64)',
@@ -14,15 +15,19 @@ export const CHART_COLORS = {
   templateUrl: './charts.component.html',
   styleUrls: ['./charts.component.scss']
 })
+
 export class ChartsComponent implements OnInit {
 
-  constructor() { Chart.register(...registerables
-  )}
+  constructor() {
+    Chart.register(...registerables
+    )
+  }
+  
   ngOnInit() {
-var myChart = new Chart("myChart", {
+    var myChart = new Chart("myChart", {
       type: 'line',
       data: {
-        labels: [20,30,40,50,60],
+        labels: [20, 30, 40, 50, 60],
         datasets: [{
           label: 'Chart1',
           data: [65, 59, 80, 81, 56, 55, 40],
@@ -32,18 +37,18 @@ var myChart = new Chart("myChart", {
         }]
       },
       options: {
-          scales: {
-              y: {
-                  beginAtZero: true
-              }
+        scales: {
+          y: {
+            beginAtZero: true
           }
+        }
       }
-  });
+    });
 
-  var chart2=new Chart(
-    "chart2",{
+    var chart2 = new Chart(
+      "chart2", {
       type: 'doughnut',
-      data:{
+      data: {
         labels: [
           'Red',
           'Blue',
@@ -61,66 +66,66 @@ var myChart = new Chart("myChart", {
         }]
       }
     }
-  );
-  // var chart3=new Chart(
-  //   "chart3",{
-  //     type: 'line',
-  //     data: {
-  //       labels: [],
-  //       datasets: [
-  //         {
-  //           label: 'Cubic interpolation (monotone)',
-  //           data: [0, 20, 20, 60, 60, 120, NaN, 180, 120, 125, 105, 110, 170],
-  //           borderColor: CHART_COLORS.red,
-  //           fill: false,
-  //           cubicInterpolationMode: 'monotone',
-  //           tension: 0.4
-  //         }, {
-  //           label: 'Cubic interpolation',
-  //           data: [0, 20, 20, 60, 60, 120, NaN, 180, 120, 125, 105, 110, 170],
-  //           borderColor: CHART_COLORS.blue,
-  //           fill: false,
-  //           tension: 0.4
-  //         }, {
-  //           label: 'Linear interpolation (default)',
-  //           data: [0, 20, 20, 60, 60, 120, NaN, 180, 120, 125, 105, 110, 170],
-  //           borderColor:  CHART_COLORS.green,
-  //           fill: false
-  //         }
-  //       ]
-  //     },
-  //     options: {
-  //       responsive: true,
-  //       plugins: {
-  //         title: {
-  //           display: true,
-  //           text: 'Chart.js Line Chart - Cubic interpolation mode'
-  //         },
-  //       },
-  //       interaction: {
-  //         intersect: false,
-  //       },
-  //       scales: {
-  //         x: {
-  //           display: true,
-  //           title: {
-  //             display: true
-  //           }
-  //         },
-  //         y: {
-  //           display: true,
-  //           title: {
-  //             display: true,
-  //             text: 'Value'
-  //           },
-  //           suggestedMin: -10,
-  //           suggestedMax: 200
-  //         }
-  //       }
-  //     },
-    
-  //   }
-  // );
+    );
+    // var chart3=new Chart(
+    //   "chart3",{
+    //     type: 'line',
+    //     data: {
+    //       labels: [],
+    //       datasets: [
+    //         {
+    //           label: 'Cubic interpolation (monotone)',
+    //           data: [0, 20, 20, 60, 60, 120, NaN, 180, 120, 125, 105, 110, 170],
+    //           borderColor: CHART_COLORS.red,
+    //           fill: false,
+    //           cubicInterpolationMode: 'monotone',
+    //           tension: 0.4
+    //         }, {
+    //           label: 'Cubic interpolation',
+    //           data: [0, 20, 20, 60, 60, 120, NaN, 180, 120, 125, 105, 110, 170],
+    //           borderColor: CHART_COLORS.blue,
+    //           fill: false,
+    //           tension: 0.4
+    //         }, {
+    //           label: 'Linear interpolation (default)',
+    //           data: [0, 20, 20, 60, 60, 120, NaN, 180, 120, 125, 105, 110, 170],
+    //           borderColor:  CHART_COLORS.green,
+    //           fill: false
+    //         }
+    //       ]
+    //     },
+    //     options: {
+    //       responsive: true,
+    //       plugins: {
+    //         title: {
+    //           display: true,
+    //           text: 'Chart.js Line Chart - Cubic interpolation mode'
+    //         },
+    //       },
+    //       interaction: {
+    //         intersect: false,
+    //       },
+    //       scales: {
+    //         x: {
+    //           display: true,
+    //           title: {
+    //             display: true
+    //           }
+    //         },
+    //         y: {
+    //           display: true,
+    //           title: {
+    //             display: true,
+    //             text: 'Value'
+    //           },
+    //           suggestedMin: -10,
+    //           suggestedMax: 200
+    //         }
+    //       }
+    //     },
+
+    //   }
+    // );
 
   }
 }
