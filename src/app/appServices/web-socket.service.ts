@@ -15,7 +15,7 @@ export class WebSocketService {
   constructor() {
     this.socket = io(this.url)
   }
-//
+
   listen(eventName: any) {
     return new Observable(subscriber => {
       this.socket.on(eventName, (data: any) => {
@@ -31,8 +31,8 @@ this.socket.on('connect', function(socket:any) {
   console.log('check 2', socket.connected);
 });
 }
-  emit(UserName: any, data: any) {
-    this.socket.emit(UserName,data)
+  emit(eventName: any, data: any) {
+    this.socket.emit(eventName,data)
   }
 
 }
