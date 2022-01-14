@@ -11,7 +11,9 @@ export class RejectedmaterialmasterComponent implements OnInit {
   Object = Object;
 
   constructor() { }
-
+  returnZero() {
+    return 0
+}
   ngOnInit(): void {
   }
 

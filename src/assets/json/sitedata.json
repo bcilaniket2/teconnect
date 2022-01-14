@@ -34,7 +34,7 @@
         "EmployeeId": "220343243242",
         "WorkOrderNumber": "55",
         "RejectedMaterialQuantity": "20",
-        "SenderId": "45627"
+        "SenderId": "45628"
       },
       {
         "Id": "2",
@@ -47,7 +47,7 @@
         "EmployeeId": "220",
         "WorkOrderNumber": "55",
         "RejectedMaterialQuantity": "20",
-        "SenderId": "45627"
+        "SenderId": "45629"
       }
     ]
   }
