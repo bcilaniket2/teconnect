@@ -1,18 +1,35 @@
 @import "../../assets/sass/main.scss";
-
+.menu {
+  display: flex;
+  width: 100%;
+}
 .navbuttons_container {
-  text-align: center;
+  width:20%;
   margin-top: 50px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid transparent;
-  border-image: linear-gradient(
-    0.25turn,
-    rgba(56, 2, 155, 0),
-    #d1cce0,
-    rgba(56, 2, 155, 0)
-  );
-  border-image-slice: 1;
+  height: 400px;
+  .home_container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1.2px solid #d3d3d35e;
+    .home_image {
+      width: 24px;
+      height: 23px;
+      align-items: center;
+      padding: 0 0 0 30px;
+    }
+  }
+  p {
+    color: #051441;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    padding: 0 20px;
+  }
   .dropdown {
+    width: 100%;
     position: relative;
     display: inline-block;
   }
@@ -20,10 +37,11 @@
     display: none;
     overflow-x: hidden;
     overflow-y: auto;
-    height: 220px;
+    height: 180px;
     position: absolute;
     background-color: white;
-    min-width: 240px;
+    // min-width: 240px;
+    width: 100%;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     z-index: 1;
     padding-top: 20px;
@@ -37,7 +55,7 @@
     font-weight: 600;
     font-size: 15px;
     color: #051441;
-    padding: 12px 20px;
+    padding: 10px 20px 10px 74px;
     text-decoration: none;
     display: block;
     @media only screen and (min-width: $web) {
@@ -46,7 +64,8 @@
   }
   .dropdown-content a:hover {
     background-color: #faeea9;
-    border-radius: 4px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
     color: #e93229;
   }
 
@@ -56,31 +75,30 @@
 
   .navbuttons {
     cursor: pointer;
-    margin: 0 20px;
-    .navbuttons_link {
-      color: #051441;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 17px;
+    display: flex;
+    .navbuttons_image {
+      width: 24px;
+      height: 23px;
+      align-items: center;
+      padding: 0 0 0 30px;
     }
-  }
-}
-.navbuttons a {
-  font-size: 15px;
-  @media only screen and (min-width: $web) {
-    font-size: 17px;
   }
 }
 .navbuttons_container .navbuttons_link.myactive.active {
   color: #e93229;
 }
 
-.report_content {
-  margin: 40px;
-  height: 500px;
-  // background-image: url("../../assets/jpg/report_content_bg.jpg");
-  // background-repeat: no-repeat;
-  // background-size: cover;
+.report_content_container {
+  width: 80%;
+  // height: 500px;
   border-radius: 13px;
-  opacity: 0.7;
+  // opacity: 0.7;
+.report_content{
+  margin: 72px 20px 50px 20px
+
+}
+h4{
+  font-size: 15px;
+  color: gray;
+}
 }

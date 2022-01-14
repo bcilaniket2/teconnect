@@ -11,7 +11,6 @@ import { FooterComponent } from './home/footer/footer.component';
 // import { AuthComponent } from './auth/auth.component';
 import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
 // import { MenuComponent } from './menu/menu.component';
-// import { Report1Component } from './menu/report1/report1.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
     HeaderComponent,
     FooterComponent,
     // MenuComponent,
-    // Report1Component,
     // AuthComponent
   ],
   imports: [

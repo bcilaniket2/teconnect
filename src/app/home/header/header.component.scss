@@ -10,37 +10,13 @@
   align-items: center;
   justify-content: center;
   height: 70px;
-  transition: top 0.3s ease-in-out;
-  .header_container {
-  a {
-      @include flex-item-center();
-      text-decoration: none;
-      // margin-right: 400px;
-    }
-    a:hover {
-      .header_icon {
-        transform: rotate(360deg);
-        transform: translate(80%);
-      }
-      p {
-        transition: all 0.9s;
-        color: transparent;
-      }
-    }
-    .header_icon {
-      width: 70px;
-      height: 67.5px;
-      margin-right: 4px;
-      transition: transform 0.7s ease-in-out;
-       &__block {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    p {
-     color: #e93229;
-      font-size: 20px;
-      font-weight: 300;
+  .header_icon {
+    width: 134px;
+    height: 49px;
+    margin-right: 4px;
+    &__block {
+      width: 100%;
+      height: 100%;
     }
   }
 }

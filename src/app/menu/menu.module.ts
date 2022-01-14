@@ -1,22 +1,34 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Report1Component } from './report1/report1.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './menu.component';
-import { Report2Component } from './report2/report2.component';
 import { ChartsComponent } from './charts/charts.component';
+import { BreakmasterComponent } from './breakmaster/breakmaster.component';
+import { LogdetailmasterComponent } from './logdetailmaster/logdetailmaster.component';
+import { ProcessdetailmasterComponent } from './processdetailmaster/processdetailmaster.component';
+import { RejectedmaterialmasterComponent } from './rejectedmaterialmaster/rejectedmaterialmaster.component';
 // import { NgChartsModule } from 'ng2-charts';
 const menuRoutes: Routes = [
   {
     path: '',
     component: MenuComponent,
-    children: [{ path: 'report1', component: Report1Component },
-    { path: 'report2', component: Report2Component },{path:'charts', component:ChartsComponent}],
+    children: [
+      { path: 'breakmaster', component: BreakmasterComponent },
+      { path: 'logdetail', component: LogdetailmasterComponent },
+      { path: 'processdetail', component: ProcessdetailmasterComponent },
+      { path: 'rejectedmaterial', component: RejectedmaterialmasterComponent },
+      { path: 'charts', component: ChartsComponent },
+    ],
   },
 ];
 
 @NgModule({
-  declarations: [Report1Component, MenuComponent, Report2Component, ChartsComponent],
+  declarations: [MenuComponent,
+    ChartsComponent,
+    BreakmasterComponent,
+    LogdetailmasterComponent,
+    ProcessdetailmasterComponent,
+    RejectedmaterialmasterComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(menuRoutes),

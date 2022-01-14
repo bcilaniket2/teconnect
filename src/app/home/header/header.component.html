@@ -5,17 +5,14 @@
   [valueWhenHidden]="'-100px'"
   [valueWhenShown]="'0px'"
 >
-  <div class="header_container">
-    <a
-      class="navbuttons_link"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-      routerLink="/"
-    >
-      <div class="header_icon">
-        <img class="header_icon__block" [src]="siteData.header.logo" />
-      </div>
-      <p>{{siteData.header.name}}</p>
-    </a>
-  </div>
+  <a
+    class="navbuttons_link"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLink="/"
+  >
+    <div class="header_icon">
+      <img class="header_icon__block" [src]="siteData.header.logo" />
+    </div>
+  </a>
 </header>

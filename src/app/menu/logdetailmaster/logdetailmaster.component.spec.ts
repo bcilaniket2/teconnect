@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Report2Component } from './report2.component';
+import { LogdetailmasterComponent } from './logdetailmaster.component';
 
-describe('Report2Component', () => {
-  let component: Report2Component;
-  let fixture: ComponentFixture<Report2Component>;
+describe('LogdetailmasterComponent', () => {
+  let component: LogdetailmasterComponent;
+  let fixture: ComponentFixture<LogdetailmasterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Report2Component ]
+      declarations: [ LogdetailmasterComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Report2Component);
+    fixture = TestBed.createComponent(LogdetailmasterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

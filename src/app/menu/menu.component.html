@@ -1,31 +1,44 @@
-<!-- <p *ngFor="let key of Object.keys(siteData.menu)">{{key}}</p> -->
-<div class="navbuttons_container">
-  <div class="dropdown">
-    <div class="navbuttons">
-      <a
-        class="navbuttons_link"
-        *ngFor="let reports_list of Object.keys(siteData.menu.Menu[0])"
-        >{{ reports_list }}</a
-      >
+<div class="menu">
+  <div class="navbuttons_container">
+    <div class="home_container">
+      <img class="home_image" src="../../assets/png/home.png" />
+      <p *ngFor="let key of Object.keys(siteData.menu)">{{ key }}</p>
     </div>
-    <div class="dropdown-content">
-      <div
-        class="reports"
-        *ngFor="let reports of siteData.menu.Menu[0].Reports"
-      >
-        <div *ngFor="let reports_names of Object.keys(reports)">
-          <a
-            class="navbuttons_link"
-            routerLinkActive="myactive active"
-            *ngFor="let reports_link of Object.values(reports)"
-            routerLink="/menu/{{ reports_link }}"
-            >{{ reports_names }}</a
-          >
+
+    <div class="dropdown">
+      <div class="navbuttons">
+        <img class="navbuttons_image" src="../../assets/png/reports.png" />
+        <p
+          class="navbuttons_link"
+          *ngFor="let reports_list of Object.keys(siteData.menu.Menu[0])"
+        >
+          {{ reports_list }}
+        </p>
+      </div>
+      <div class="dropdown-content">
+        <div
+          class="reports"
+          *ngFor="let reports of siteData.menu.Menu[0].Reports"
+        >
+          <div *ngFor="let reports_names of Object.keys(reports)">
+            <a
+              class="navbuttons_link"
+              routerLinkActive="myactive active"
+              *ngFor="let reports_link of Object.values(reports)"
+              routerLink="/menu/{{ reports_link }}"
+              >{{ reports_names }}</a
+            >
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="report_content">
-  <router-outlet></router-outlet>
+  <div class="report_content_container">
+    <div class="report_content">
+  <h4 *ngIf="router.url === '/menu'">This application is for Hero MotoCorp
+    <br>
+    Please use navigation tabs to perform an action</h4>
+    <router-outlet></router-outlet>
+  </div>
+  </div>
 </div>
