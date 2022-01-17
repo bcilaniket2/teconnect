@@ -1,4 +1,6 @@
-.chart_container{
-    width: 300px;
-    height: 100px;
-   }
+.chart_container {
+  width: 300px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}

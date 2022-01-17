@@ -35,10 +35,17 @@
   </div>
   <div class="report_content_container">
     <div class="report_content">
-  <h4 *ngIf="router.url === '/menu'">This application is for Hero MotoCorp
-    <br>
-    Please use navigation tabs to perform an action</h4>
-    <router-outlet></router-outlet>
-  </div>
+      <h4
+        data-aos-once="true"
+        data-aos="fade-up"
+        data-aos-delay="100"
+        *ngIf="router.url === '/menu'"
+      >
+        This application is for Hero MotoCorp
+        <br />
+        Please use navigation tabs to perform an action
+      </h4>
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>

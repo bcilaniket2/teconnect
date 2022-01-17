@@ -13,7 +13,6 @@ const authRoutes: Routes = [{ path: '', component: AuthComponent }];
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forChild(authRoutes),
-   
   ]
 })
 export class AuthModule { }

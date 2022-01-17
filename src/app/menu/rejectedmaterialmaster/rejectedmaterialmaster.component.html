@@ -1,16 +1,22 @@
-<div>
-<table>
-    <thead>  
-        <tr>  
-          <th  class="table_heading" *ngFor="
-          let columnNames of siteData.Reports.RejectedMaterial[0] | keyvalue: returnZero
-        ">{{columnNames.key}}</th>  
-    </tr>  
-    </thead>
-    <tbody>  
-        <tr *ngFor="let arr of siteData.Reports.RejectedMaterial">  
-          <td *ngFor="let data of arr | keyvalue: returnZero">{{ data.value }}</td>
-        </tr>  
-      </tbody>  
-</table>  
-</div>
+<table data-aos-once="true" data-aos="zoom-in" data-aos-delay="100">
+  <thead>
+    <tr>
+      <th
+        class="table_heading"
+        *ngFor="
+          let columnNames of rejectedMaterial.Reports.RejectedMaterial[0]
+            | keyvalue: returnZero
+        "
+      >
+        {{ columnNames.key }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let arr of rejectedMaterial.Reports.RejectedMaterial">
+      <td *ngFor="let data of arr | keyvalue: returnZero">
+        {{ data.value }}
+      </td>
+    </tr>
+  </tbody>
+</table>

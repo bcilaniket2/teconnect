@@ -7,13 +7,13 @@ import sitedata from '../../../assets/json/sitedata.json';
   styleUrls: ['./rejectedmaterialmaster.component.scss']
 })
 export class RejectedmaterialmasterComponent implements OnInit {
-  siteData: { Reports: any } = sitedata;
+  rejectedMaterial: { Reports: any } = sitedata;
   Object = Object;
 
   constructor() { }
   returnZero() {
     return 0
-}
+  }
   ngOnInit(): void {
   }
 

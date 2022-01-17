@@ -1,1 +1,45 @@
-<p>processdetailmaster works!</p>
+<div>
+  <div class="form-group">
+    <input
+      type="text"
+      class="search_data"
+      placeholder="Search..."
+      [(ngModel)]="filterTerm"
+    />
+  </div>
+
+  <table data-aos-once="true" data-aos="zoom-in" data-aos-delay="100">
+    <thead>
+      <tr>
+        <th
+          class="table_heading"
+          *ngFor="let columnNames of processDetail[0] | keyvalue: returnZero"
+        >
+          {{ columnNames.key }}
+          <span (click)="setOrder(columnNames.key)">{{reverse?'▼':'▲'}}</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="
+          let arr of processDetail
+            | orderBy: order:reverse:caseInsensitive
+            | filter: filterTerm
+            | paginate: { itemsPerPage: 10, currentPage: p }
+        "
+      >
+        <td *ngFor="let data of arr | keyvalue: returnZero">
+          {{ data.value }}
+        </td>
+      </tr>
+    </tbody>
+    <pagination-controls
+      (pageChange)="p = $event"
+      previousLabel=""
+      nextLabel=""
+      [maxSize]="7"
+      [responsive]="true"
+    ></pagination-controls>
+  </table>
+</div>

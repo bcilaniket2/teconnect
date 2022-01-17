@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { WebSocketService } from '../appServices/web-socket.service';
 
 @Component({
   selector: 'app-auth',
@@ -31,11 +32,17 @@ export class AuthComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private webSocketService: WebSocketService
   ) // private _authService: AuthService,
   // private _errService: ErrorService
   {
     console.log('auth');
+    this.webSocketService.listen('test event').subscribe((data) => {
+      console.log(data)
+    })
+    this.webSocketService.check()
+
   }
 
   get registerFormControl() {

@@ -8,6 +8,11 @@ import { LogdetailmasterComponent } from './logdetailmaster/logdetailmaster.comp
 import { ProcessdetailmasterComponent } from './processdetailmaster/processdetailmaster.component';
 import { RejectedmaterialmasterComponent } from './rejectedmaterialmaster/rejectedmaterialmaster.component';
 // import { NgChartsModule } from 'ng2-charts';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
+import { OrderModule } from 'ngx-order-pipe';
+
 const menuRoutes: Routes = [
   {
     path: '',
@@ -32,7 +37,11 @@ const menuRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(menuRoutes),
-    // NgChartsModule
+    // NgChartsModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
+    FormsModule,
+    OrderModule
   ]
 })
 export class MenuModule { }
