@@ -102,6 +102,24 @@
   }
 }
 
+.bottom_to_top {
+  width: 34px;
+  height: 34px;
+  background: #faeea9;
+  border-radius: 30px;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 70px;
+  cursor: pointer;
+  &__block {
+    text-align: center;
+    color: #e93229;
+    font-weight: 600;
+    font-size: 22px;
+    padding-top: 7.2px;
+  }
+}
+
 //
 :host ::ng-deep input {
   font-weight: 500;
@@ -111,7 +129,7 @@
   font-size: 14px;
   color: #051441;
   margin-bottom: 20px;
-  }
+}
 :host ::ng-deep input:focus {
   border: 1px solid #4154f1;
 }

@@ -21,6 +21,7 @@ export class ProcessdetailmasterComponent implements OnInit {
   filterTerm: any
   order: string = 'processDetail.Id';
   reverse: boolean = false;
+  arrow:boolean=false;
   caseInsensitive: boolean = false;
 
   constructor() { }
@@ -30,6 +31,7 @@ export class ProcessdetailmasterComponent implements OnInit {
   }
 
   setOrder(value: any) {
+    this.arrow=true;
     if (this.order === value) {
       this.reverse = !this.reverse;
     }

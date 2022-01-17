@@ -16,7 +16,11 @@
           *ngFor="let columnNames of processDetail[0] | keyvalue: returnZero"
         >
           {{ columnNames.key }}
-          <span (click)="setOrder(columnNames.key)">{{reverse?'▼':'▲'}}</span>
+          <span
+            (click)="setOrder(columnNames.key)"
+            [ngStyle]="{ color: arrow ? '#e93229' : '#faeea9' }"
+            >{{ reverse ? "▼" : "▲" }}</span
+          >
         </th>
       </tr>
     </thead>
