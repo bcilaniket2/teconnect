@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { WebSocketService } from '../appServices/web-socket.service';
-
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
@@ -33,16 +32,12 @@ export class AuthComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private webSocketService: WebSocketService
-  ) // private _authService: AuthService,
-  // private _errService: ErrorService
-  {
-    console.log('auth');
-    this.webSocketService.listen('test event').subscribe((data) => {
-      console.log(data)
-    })
-    this.webSocketService.check()
-
+    private webSocketService: WebSocketService,
+  ) {
+    // this.webSocketService.listen('test event').subscribe((data) => {
+    //   this.webSocketService.emit('ValidateServerUser', { "UserName": "1", "Password": "1" })
+    //   console.log(data)
+    // })
   }
 
   get registerFormControl() {
@@ -53,8 +48,8 @@ export class AuthComponent implements OnInit {
     if (this.authForm.valid) {
       const userId = this.authForm.value.userId;
       const password = this.authForm.value.password;
-      if (userId == 'admin' && password == '12345') {
-        this.router.navigate(['menu']);
+      if (userId == '1' && password == '1') {
+        this.webSocketService.emit(userId, password)
       }
     } else {
       this.authForm.markAllAsTouched();
@@ -62,10 +57,5 @@ export class AuthComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this._authService.user.subscribe((res) => {
-    //   if (res) {
-    //     this.router.navigate(['dashboard/money-transfer']);
-    //   }
-    // });
   }
 }

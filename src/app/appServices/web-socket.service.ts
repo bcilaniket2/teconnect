@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { io } from 'socket.io-client';
-
 @Injectable({
   providedIn: 'root'
 })
 
 export class WebSocketService {
   socket: any
-  readonly url: string = 'ws://192.168.0.3:9100'
-  // readonly url: string = 'http://3.109.47.45:9100'
+  readonly url: string = 'ws://192.168.0.4:9100'
 
   constructor() {
     this.socket = io(this.url)
@@ -24,17 +22,17 @@ export class WebSocketService {
   }
 
   check() {
-    // console.log('check 1', this.socket.connected);
-    this.socket.on('', (data: any) => {
-      console.log(data);
+    this.socket.on("connection", (socket: any) => {
+      console.log(socket);
     });
   }
 
-  // emit(UserName: any, Password: any) {
-  //   this.socket.emit("1", "1")
-  // }
-  emit(eventName: any, data: any) {
-    this.socket.emit(eventName, data)
+  // // ValidateServerUser~{ "UserName": "1", "Password":"1"}~$
+  // // ValidateServerUser~{"UserName": "1","Password":"1"}~>
+  emit(userId: any, password: any) {
+    console.log(this.socket)
+
+    this.socket.emit("authentication", { "UserName": userId, "Password": password })
   }
 
 }
