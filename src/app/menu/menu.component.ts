@@ -36,7 +36,7 @@ export class MenuComponent implements OnInit {
     }
   }
 
-  // TODO: Cross browsing
+  // Cross browsing
   gotoTop() {
     window.scroll({
       top: 0,
