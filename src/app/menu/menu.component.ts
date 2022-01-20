@@ -10,8 +10,11 @@ import sitedata from '../../assets/json/sitedata.json';
 })
 
 export class MenuComponent implements OnInit {
+  isShow: any;
+  topPosToStartShowing = 40;
   siteData: { menu: any } = sitedata;
   Object = Object;
+
   constructor(public router: Router) {
     // this.webSocketService.listen('test event').subscribe((data) => {
     //   console.log(data)
@@ -21,13 +24,11 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  isShow: any;
-  topPosToStartShowing = 40;
 
   @HostListener('window:scroll')
   checkScroll() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    console.log('[scroll]', scrollPosition);
+    // console.log('[scroll]', scrollPosition);
     if (scrollPosition >= this.topPosToStartShowing) {
       this.isShow = true;
     } else {
@@ -43,6 +44,5 @@ export class MenuComponent implements OnInit {
       behavior: 'smooth'
     });
   }
-
 
 }
