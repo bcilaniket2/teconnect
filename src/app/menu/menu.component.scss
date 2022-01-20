@@ -105,13 +105,13 @@
 .bottom_to_top {
   width: 34px;
   height: 34px;
-  background: #faeea9;
-  border-radius: 30px;
   align-items: center;
   margin-bottom: 20px;
   margin-left: 70px;
   cursor: pointer;
   &__block {
+    background: #faeea9;
+    border-radius: 30px;
     text-align: center;
     color: #e93229;
     font-weight: 600;
