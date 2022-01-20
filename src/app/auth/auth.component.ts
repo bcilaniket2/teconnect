@@ -35,8 +35,8 @@ export class AuthComponent implements OnInit {
     private webSocketService: WebSocketService,
   ) {
     // this.webSocketService.listen('test event').subscribe((data) => {
-    //   this.webSocketService.emit('ValidateServerUser', { "UserName": "1", "Password": "1" })
     //   console.log(data)
+    //   this.webSocketService.emit('ValidateServerUser', { "UserName": "1", "Password": "1" })
     // })
   }
 
@@ -49,7 +49,12 @@ export class AuthComponent implements OnInit {
       const userId = this.authForm.value.userId;
       const password = this.authForm.value.password;
       if (userId == '1' && password == '1') {
-        this.webSocketService.emit(userId, password)
+    this.webSocketService.listen('test event').subscribe((data) => {
+      this.webSocketService.emit(userId, password)
+
+      console.log(data)
+    })
+    //     this.webSocketService.emit(userId, password)
       }
     } else {
       this.authForm.markAllAsTouched();
@@ -57,5 +62,7 @@ export class AuthComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  // debugger
   }
+  
 }

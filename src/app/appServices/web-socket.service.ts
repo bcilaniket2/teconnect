@@ -7,7 +7,8 @@ import { io } from 'socket.io-client';
 
 export class WebSocketService {
   socket: any
-  readonly url: string = 'ws://192.168.0.4:9100'
+  readonly url: string = 'ws://192.168.0.3:9100'
+  // readonly url: string = 'http://localhost:3000'
 
   constructor() {
     this.socket = io(this.url)
@@ -31,7 +32,6 @@ export class WebSocketService {
   // // ValidateServerUser~{"UserName": "1","Password":"1"}~>
   emit(userId: any, password: any) {
     console.log(this.socket)
-
     this.socket.emit("authentication", { "UserName": userId, "Password": password })
   }
 

@@ -91,7 +91,7 @@
 .report_content_container {
   width: 80%;
   border-radius: 13px;
-  // opacity: 0.7;
+  color: #051441;
   .report_content {
     margin: 72px 20px 0px 20px;
     padding-bottom: 50px;
@@ -177,6 +177,7 @@
   a:hover {
     border-radius: 30px;
     background: #faeea9;
+    transition: background 0.3s;
     color: #e93229;
   }
 }
