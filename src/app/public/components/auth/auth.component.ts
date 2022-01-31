@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { WebSocketService } from '../appServices/web-socket.service';
+import { WebSocketService } from '../../../core/services/web-socket.service';
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
@@ -9,6 +9,7 @@ import { WebSocketService } from '../appServices/web-socket.service';
 })
 
 export class AuthComponent implements OnInit {
+  showPassword:any=false;
   authForm = this.formBuilder.group({
     userId: [
       '',
@@ -43,6 +44,10 @@ export class AuthComponent implements OnInit {
   get registerFormControl() {
     return this.authForm.controls;
   }
+
+showhidePassword(){
+  this.showPassword=!this.showPassword
+}
 
   onSubmit() {
     if (this.authForm.valid) {

@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import sitedata from '../../assets/json/sitedata.json';
+import sitedata from '../../../../assets/json/sitedata.json';
 // import { WebSocketService } from '../appServices/web-socket.service';
 
 @Component({

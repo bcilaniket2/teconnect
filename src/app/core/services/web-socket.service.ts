@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { io } from 'socket.io-client';
+import { config } from 'src/app/config';
+
 @Injectable({
   providedIn: 'root'
 })
 
 export class WebSocketService {
   socket: any
-  readonly url: string = 'ws://192.168.0.3:9100'
-  // readonly url: string = 'http://localhost:3000'
+  readonly url: string = config.socketUrl
 
   constructor() {
     this.socket = io(this.url)

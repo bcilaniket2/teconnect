@@ -1,4 +1,4 @@
-@import "../../assets/sass/main.scss";
+@import "../../../../assets/sass/main.scss";
 .auth_wrapper {
   text-align: center;
   padding: 80px 16% 51px 16%;
@@ -32,54 +32,67 @@
   .auth_form {
     .elements {
       width: 100%;
-      .element_name {
-        width: 400px;
+      .element {
+        width: 370px;
         margin: 0px auto 33px auto;
         @media only screen and (max-width: 1180px) {
-          width: 356px;
+          width: 310px;
         }
         @media only screen and (max-width: 650px) {
-          width: 296px;
+          width: 290px;
         }
         @media only screen and (max-width: 480px) {
-          width: 230px;
+          width: 280px;
         }
+      }
+      .element_name {
+        border-radius: 30px;
+        border: 1px solid #e1e1e3;
 
-        .field {
-          width: 342px;
-          font-weight: 500;
-          padding: 20px 26px;
-          border-radius: 30px;
-          border: 1px solid #e1e1e3;
+        .input_password {
           font-size: 14px;
-          // outline: none;
           color: #051441;
-          @media only screen and (max-width: 1180px) {
-            width: 300px;
-          }
-          @media only screen and (max-width: 650px) {
-            width: 240px;
-          }
-
+          display: flex;
+          align-items: center;
           @media only screen and (max-width: 580px) {
             font-size: 13px;
+          }
+          .show_password {
+            padding-right: 20px;
+          }
+        }
+        .field {
+          width: 316px;
+          font-weight: 500;
+          padding: 20px 26px;
+          border: none;
+          background: transparent;
+          font-size: 14px;
+          @media only screen and (max-width: 1180px) {
+            width: 256px;
+          }
+          @media only screen and (max-width: 580px) {
+            font-size: 13px;
+          }
+          @media only screen and (max-width: 650px) {
+            width: 236px;
           }
 
           @media only screen and (max-width: 480px) {
-            width: 174px;
             padding: 18.5px 26px;
+            width: 226px;
           }
         }
-        .field:focus {
-          border: 1px solid #4154f1;
-        }
-        .alert {
-          font-size: 13.5px;
-          color: #f30303;
-          margin: 8px 0 0 26px;
-          @media only screen and (max-width: 580px) {
-            font-size: 13px;
-          }
+      }
+      .element_name:focus-within{
+          border: 1px solid #4154f1;  
+      }
+      .alert {
+        font-size: 13.5px;
+        color: #f30303;
+        margin: 8px 0 0 26px;
+        @media only screen and (max-width: 580px) {
+          font-size: 13px;
         }
       }
     }

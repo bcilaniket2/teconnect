@@ -15,13 +15,15 @@
   <form class="auth_form" [formGroup]="authForm">
     <!-- <div class="api_error" *ngIf="error">{{ error }}</div> -->
     <div class="elements">
-      <div class="element_name">
-        <input
-          type="text"
-          class="field"
-          formControlName="userId"
-          placeholder="User Id"
-        />
+      <div class="element">
+        <div class="element_name">
+          <input
+            type="text"
+            class="field"
+            formControlName="userId"
+            placeholder="User Id"
+          />
+        </div>
         <div
           *ngIf="
             registerFormControl['userId'].invalid &&
@@ -38,13 +40,20 @@
           </div> -->
         </div>
       </div>
-      <div class="element_name">
-        <input
-          type="text"
-          class="field"
-          formControlName="password"
-          placeholder="Password"
-        />
+      <div class="element">
+        <div class="element_name">
+          <div class="input_password">
+            <input
+              [type]="showPassword ? 'text' : 'password'"
+              class="field"
+              formControlName="password"
+              placeholder="Password"
+            />
+            <p class="show_password" (click)="showhidePassword()">
+              {{ showPassword ? "Hide" : "Show" }}
+            </p>
+          </div>
+        </div>
         <div
           *ngIf="
             registerFormControl['password'].invalid &&
